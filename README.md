@@ -25,8 +25,20 @@ This sprint challenge is divided up into three parts:  Hash tables (24 points), 
 During your challenge, you will be pulled aside by a PM for a 5 minute interview. During this interview, you will be expected to answer the following three questions:
 
   * 1. What is a blockchain and how does it work?
+
+A blockchain is a secure data structure. It is has no centralized authority. It is available to anyone and many people must use it and share data between other holders of the block chain for to be effective. The chain must begin with a genesis block. Each block in the chain is a collection of information.
+
+A block is created when a proof is found for a block. Proofs are a hashed version of the guess and last block proofs. Proofs must meet a certain condition. In the examples we've done the condition has been that the first 4 or 6 letters of the hashed guess equals '0000'/'000000'. When a block is created it contains the pending transaction, the proof, and a hash of the previous block. When the new block is created, it is sent to each node, a person holding the chain, and needs to be accepted and verified by the other nodes to be added to the chain. This makes it so the blocks within the chain are immutable.
+
   * 2. What is an array and how does it work?
+
+An array is the most basic type of data structure. It is just a contiguous block of data in storage. An array holds a fixed number of values of any data type. An array is useful because you have direct access to the index of the list as opposed to something like a linked list, which sends each node to another point memory and does not give access to each index of the list.
+
   * 3. What is a hash table and how does it work?
+
+A hash table is similar to an array. It also its a contiguous block of data. A hash table is more complex than an array and the data is not simply listed. It uses a hash function to compute an index into an array. The data is stored as a key: value pair. The keys run through the hashing function and give an output of a number between 0 and the desired length of the table. The value is placed in the index the hashing function returns. If we want to find that value we simply run the key ack through the hashing function to get the index.
+
+Hash tables have whats called a collision when two keys have the same outputted index. To avoid this we have to make sure we resize the table whenever it is nearing capacity.
 
 You will receive points at the PM's discretion based on the following criteria:
 

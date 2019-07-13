@@ -16,8 +16,26 @@ def reconstruct_trip(tickets, length):
     hashtable = HashTable(length)
     route = [None] * length
 
+
     """
     YOUR CODE HERE
     """
+    #First ticket source is 'NONE'
+    source = "NONE"
+    #Last ticket destination is 'NONE'
+    
+    # put all tickets in a hashtable
+    # source is key, dest is the value
+    for ticket in tickets:
+        hash_table_insert(hashtable, ticket.source, ticket.destination)
+
+    for x in range(length):
+        orderedTickets = hash_table_retrieve(hashtable, source)
+        # set the next key to the source of next ticket
+        source = orderedTickets
+        # add it to the route array in proper order
+        route[x] = orderedTickets
+
+            
 
     return route
